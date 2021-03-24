@@ -1,13 +1,10 @@
-logs/
-models/
 .vscode/
 *.pdf
 *.txt
 *.isorted
 !requirements.txt
-
-Chapter1_Introduction/
-Chapter12_Outlook/
+!.gitkeep
+*.h5
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
