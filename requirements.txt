@@ -7,7 +7,7 @@ tensorflow-addons
 scikit-learn
 scipy
 scikit-image
-numpy==1.19.2
+numpy==1.19.*
 matplotlib
 pandas
 opencv-python
