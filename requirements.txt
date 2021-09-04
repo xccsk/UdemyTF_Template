@@ -12,6 +12,10 @@ matplotlib
 pandas
 opencv-python
 pyqt5
+xlrd
+openpyxl
+optuna
+tensorflow_hub
 
 # Linting/Tooling
 pylint
