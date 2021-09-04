@@ -1,7 +1,10 @@
 # TensorFlow Libraries
-tensorflow==2.4.*
+tensorflow==2.6.*
 tensorflow-datasets
 tensorflow-addons
+tensorflow_hub
+tensorflow-text
+tf-models-official
 
 # Other Libraries
 scikit-learn
@@ -15,7 +18,6 @@ pyqt5
 xlrd
 openpyxl
 optuna
-tensorflow_hub
 
 # Linting/Tooling
 pylint
