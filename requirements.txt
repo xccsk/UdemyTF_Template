@@ -1,12 +1,4 @@
-# TensorFlow Libraries
-tensorflow==2.6.*
-tensorflow-datasets
-tensorflow-addons
-tensorflow_hub
-tensorflow-text
-tf-models-official
-
-# Other Libraries
+# Libraries
 scikit-learn
 scipy
 scikit-image
@@ -24,5 +16,6 @@ pylint
 flake8
 mypy
 isort
-autopep8
+black==21.4b0
 pre-commit
+autopep8
