@@ -16,6 +16,6 @@ pylint
 flake8
 mypy
 isort
-black==21.4b0
+black
 pre-commit
 autopep8
