@@ -11,7 +11,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
 
-from mnistData import MNIST
+from tf_utils.mnistData import MNIST
 
 
 np.random.seed(0)

@@ -11,10 +11,10 @@ from tensorflow.keras.layers import MaxPool2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 
-from mnistData import MNIST
+from tf_utils.mnistData import MNIST
 
 
-LOGS_DIR = os.path.abspath("C:/Users/Jan/Dropbox/_Coding/UdemyTF/logs/")
+LOGS_DIR = os.path.abspath("C:/Users/Jan/OneDrive/_Coding/UdemyTF/logs/")
 if not os.path.exists(LOGS_DIR):
     os.mkdir(LOGS_DIR)
 MODEL_LOG_DIR = os.path.join(LOGS_DIR, "cnn_no_norm_no_augment")
