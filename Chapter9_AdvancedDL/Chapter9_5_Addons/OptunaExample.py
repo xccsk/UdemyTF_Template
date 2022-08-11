@@ -1,15 +1,15 @@
 from typing import Any
 
+import optuna
+from optuna.integration import TFKerasPruningCallback
+from optuna.trial import Trial
+from optuna.trial import TrialState
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Flatten
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import RMSprop
 
-import optuna
-from optuna.integration import TFKerasPruningCallback
-from optuna.trial import Trial
-from optuna.trial import TrialState
 from tf_utils.mnistDataAdvanced import MNIST
 
 

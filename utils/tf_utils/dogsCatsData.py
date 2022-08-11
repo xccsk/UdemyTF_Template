@@ -1,14 +1,13 @@
 import os
 from typing import Tuple
 
+import cv2
 import numpy as np
 import tensorflow as tf
+from skimage import transform
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.utils import to_categorical
-
-import cv2
-from skimage import transform
 
 
 np.random.seed(0)

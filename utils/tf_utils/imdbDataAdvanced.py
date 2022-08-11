@@ -2,11 +2,10 @@ from typing import Tuple
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.layers import TextVectorization
-from tensorflow.keras.models import Sequential
-
 import tensorflow_datasets as tfds
 from tensorcross.utils import dataset_split
+from tensorflow.keras.layers import TextVectorization
+from tensorflow.keras.models import Sequential
 
 
 np.random.seed(0)
