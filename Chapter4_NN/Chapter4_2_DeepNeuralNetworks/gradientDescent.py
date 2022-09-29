@@ -13,7 +13,7 @@ def main() -> None:
     x0 = np.random.uniform(-2.0, 2.0)
     x1 = np.random.uniform(-2.0, 2.0)
 
-    x_start = (x0, x1)
+    x_start = np.array([x0, x1])
     y_start = f(x0, x1)
 
     print(f"Global minimum: {(1, 1)}")
@@ -27,8 +27,8 @@ def main() -> None:
     gradient_steps = []
 
     for it in range(num_iterations):
-        x0 = x0 - f_prime_x0(x0, x1) * learning_rate
-        x1 = x1 - f_prime_x1(x0, x1) * learning_rate
+        x0 = x0 - f_prime_x0(x0, x1) * learning_rate  # type: ignore
+        x1 = x1 - f_prime_x1(x0, x1) * learning_rate  # type: ignore
         y = f(x0, x1)
         if it % 10 == 0:
             print(f"x0, x1 = {(x0, x1)}, y = {y}")

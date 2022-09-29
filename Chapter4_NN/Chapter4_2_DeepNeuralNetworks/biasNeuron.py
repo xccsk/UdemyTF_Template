@@ -1,10 +1,5 @@
-import os
-
 import matplotlib.pyplot as plt
 import numpy as np
-
-
-IMG_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 def plot_function(
@@ -14,8 +9,8 @@ def plot_function(
     name: str = "",
 ) -> None:
     plt.step(input_signal + offset, output_signal, color="blue")
-    plt.step(input_signal - offset, output_signal, color="red")
     plt.step(input_signal, output_signal, color="black")
+    plt.step(input_signal - offset, output_signal, color="red")
     plt.xlabel("a")
     plt.ylabel("f(a)")
     plt.legend([f"Bias: -{offset}", "Bias: 0", f"Bias: {offset}"])

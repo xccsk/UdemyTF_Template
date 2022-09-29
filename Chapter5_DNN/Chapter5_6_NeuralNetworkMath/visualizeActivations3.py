@@ -21,8 +21,8 @@ def relu(x: float) -> float:
 
 def get_dataset() -> Tuple[np.ndarray, np.ndarray]:
     x = np.linspace(start=-10.0, stop=10.0, num=1000).reshape(-1, 1)
-    y = f(x)
-    return x, y
+    y = f(x)  # type: ignore
+    return x, y  # type: ignore
 
 
 def build_model1() -> Sequential:

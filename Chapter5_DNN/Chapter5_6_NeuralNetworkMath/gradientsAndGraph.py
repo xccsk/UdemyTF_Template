@@ -38,7 +38,7 @@ def get_gradients(
     y_test: np.ndarray,
     model: Sequential,
     loss_object: tf.keras.losses.Loss,
-) -> List[Tuple[np.ndarray, np.ndarray]]:
+) -> List[Tuple[tf.Tensor, tf.Tensor]]:
     with tf.GradientTape() as tape:
         y_pred = model(x_test, training=True)
         loss_value = loss_object(y_test, y_pred)

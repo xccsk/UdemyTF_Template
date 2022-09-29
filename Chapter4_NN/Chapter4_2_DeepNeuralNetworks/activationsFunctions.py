@@ -1,10 +1,5 @@
-import os
-
 import matplotlib.pyplot as plt
 import numpy as np
-
-
-IMG_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 def plot_function(

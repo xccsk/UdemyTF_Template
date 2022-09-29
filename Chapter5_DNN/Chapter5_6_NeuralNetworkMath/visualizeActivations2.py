@@ -1,4 +1,5 @@
 from typing import Tuple
+from typing import Union
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,11 +9,11 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
 
 
-def f(x: float) -> float:
+def f(x: Union[float, np.ndarray]) -> Union[float, np.ndarray]:
     return x**2 + x + 10
 
 
-def relu(x: float) -> float:
+def relu(x: Union[float, np.ndarray]) -> Union[float, np.ndarray]:
     if x > 0:
         return x
     else:
@@ -21,8 +22,8 @@ def relu(x: float) -> float:
 
 def get_dataset() -> Tuple[np.ndarray, np.ndarray]:
     x = np.linspace(start=-10.0, stop=10.0, num=1000).reshape(-1, 1)
-    y = f(x)
-    return x, y
+    y = f(x)  # type: ignore
+    return x, y  # type: ignore
 
 
 def build_model() -> Sequential:
