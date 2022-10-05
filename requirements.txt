@@ -10,6 +10,7 @@ pyqt5
 xlrd
 openpyxl
 optuna
+gym==0.17.*
 
 # Linting/Tooling
 pylint
