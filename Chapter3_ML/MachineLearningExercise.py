@@ -8,19 +8,20 @@ from tf_utils.dummyData import regression_data
 
 
 def mae(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
-    pass
+    return np.mean(np.abs(y_true - y_pred))
 
 
 def mse(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
-    pass
+    return np.mean(np.square(y_true - y_pred))
 
 
 def main() -> None:
     x, y = regression_data()
-    x = x.reshape(-1, 1)
+    x = x.reshape(-1, 1)  # Das das Arrey nur ein Feature hat muss es so geshaped werden
 
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)  # splitting code in test and train data
 
+    # regr ist eine normale abkürzung zum thema und dieser LinearRegression funktion ist halt das die NN die Funktion linear ausspuckt
     regr = LinearRegression()
     regr.fit(x_train, y_train)
     y_pred = regr.predict(x_test)
